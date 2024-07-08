@@ -70,7 +70,7 @@ class MainActivity : AppCompatActivity() {
         userScoreText.text = "Your Score: $userScore"
         appScoreText.text = "App Score: $appScore"
 
-        if (userScore == maxScore || appScore == maxScore) {
+        if (userScore >= maxScore || appScore >= maxScore) {
             endGame()
         }
     }
@@ -94,7 +94,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun endGame() {
-        val winner = if (userScore >= maxScore) "You" else "App"
+        val winner = if (userScore >= appScore) "You" else "App"
         resultText.text = "$winner Win the Game!"
         userScore = 0
         appScore = 0
