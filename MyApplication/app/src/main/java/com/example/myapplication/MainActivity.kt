@@ -32,8 +32,8 @@ class MainActivity : AppCompatActivity() {
 
     private fun showDialog() {
         val builder = AlertDialog.Builder(this)
-        builder.setMessage("Да")
-        builder.setPositiveButton("Пизда") { dialog, which ->
+        builder.setMessage("Окошко")
+        builder.setPositiveButton("Пасиба") { dialog, which ->
             dialog.dismiss()
         }
         builder.show()
