@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".MainActivity">
 
     <Button
@@ -16,7 +17,7 @@
         android:layout_marginEnd="80dp"
         android:layout_marginBottom="129dp"
         android:backgroundTint="#E91E63"
-        android:text="Нажми меня и узнай" />
+        android:text="Нажми меня" />
 
     <TextView
         android:id="@+id/text"
@@ -28,7 +29,7 @@
         android:layout_marginStart="91dp"
         android:layout_marginEnd="78dp"
         android:layout_marginBottom="52dp"
-        android:text="Ты гей?"
+        android:text="Нажми кнопачку"
         android:textAlignment="center"
         android:textColor="#000000"
         android:textSize="34sp"
