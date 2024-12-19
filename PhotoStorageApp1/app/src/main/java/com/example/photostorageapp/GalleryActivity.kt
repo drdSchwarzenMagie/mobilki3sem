@@ -1,5 +1,6 @@
 package com.example.photostorageapp
 
+import android.content.Intent
 import android.graphics.Bitmap
 import android.os.Bundle
 import android.widget.GridView
@@ -34,6 +35,17 @@ class GalleryActivity : AppCompatActivity() {
                 return true
             }
         })
+
+        galleryGridView.setOnItemClickListener { _, _, position, _ ->
+            // Получаем фотографию по позиции
+            val selectedPhoto = dbHelper.getPhotos(null)[position]
+            val bitmap = selectedPhoto.bitmap
+
+            // Создаем Intent для перехода в FullScreenActivity
+            val intent = Intent(this, FullScreenActivity::class.java)
+            intent.putExtra("imageBitmap", bitmap)
+            startActivity(intent)
+        }
     }
 
     private fun loadImages(query: String?) {
